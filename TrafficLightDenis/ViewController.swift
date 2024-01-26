@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet var redLightView: UIView!
     @IBOutlet var yellowLightView: UIView!
     @IBOutlet var greenLightView: UIView!
@@ -20,10 +20,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        buttonView.layer.cornerRadius = 10
+    }
+    
+//    Корректировка радиуса светофора под разные устройства после загрузки View
+    override func viewDidLayoutSubviews() {
         redLightView.layer.cornerRadius = lightCornerRadius
         yellowLightView.layer.cornerRadius = lightCornerRadius
         greenLightView.layer.cornerRadius = lightCornerRadius
-        buttonView.layer.cornerRadius = 10
     }
     
     @IBAction func buttonViewTapped(_ sender: UIButton) {
@@ -52,7 +56,7 @@ class ViewController: UIViewController {
             )
         }
     }
-    
+
     private func updateLight(
         redLightTransparency: CGFloat,
         yellowLightTransparency: CGFloat,
