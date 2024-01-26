@@ -18,6 +18,98 @@
             endingLineNumber = "13"
             landmarkName = "ViewController"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "1B2465A7-A77D-426F-A385-1BF19AFDC417 - 9a9116a04d809685"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TrafficLightDenis.ViewController.yellowLightView.getter : Swift.Optional&lt;__C.UIView&gt;"
+                  moduleName = "TrafficLightDenis"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/denisdenisov/Developer/TrafficLightDenis/TrafficLightDenis/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "1B2465A7-A77D-426F-A385-1BF19AFDC417 - d6d773d262923eb1"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TrafficLightDenis.ViewController.yellowLightView.setter : Swift.Optional&lt;__C.UIView&gt;"
+                  moduleName = "TrafficLightDenis"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/denisdenisov/Developer/TrafficLightDenis/TrafficLightDenis/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "1B2465A7-A77D-426F-A385-1BF19AFDC417 - dd4fc478e1383eed"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TrafficLightDenis.ViewController.yellowLightView.modify : Swift.Optional&lt;__C.UIView&gt;"
+                  moduleName = "TrafficLightDenis"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/denisdenisov/Developer/TrafficLightDenis/TrafficLightDenis/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "1B2465A7-A77D-426F-A385-1BF19AFDC417 - 6ffd1236f8850b68"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TrafficLightDenis.ViewController.yellowLightView.modify : Swift.Optional&lt;__C.UIView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "TrafficLightDenis"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/denisdenisov/Developer/TrafficLightDenis/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "1B2465A7-A77D-426F-A385-1BF19AFDC417 - abb6799686e24b2e"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TrafficLightDenis.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; TrafficLightDenis.ViewController"
+                  moduleName = "TrafficLightDenis"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/denisdenisov/Developer/TrafficLightDenis/TrafficLightDenis/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "1B2465A7-A77D-426F-A385-1BF19AFDC417 - 40818b165916fedd"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TrafficLightDenis.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;TrafficLightDenis.ViewController&gt;"
+                  moduleName = "TrafficLightDenis"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/denisdenisov/Developer/TrafficLightDenis/TrafficLightDenis/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "120">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

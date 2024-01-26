@@ -25,7 +25,42 @@ class ViewController: UIViewController {
         greenLightView.layer.cornerRadius = lightCornerRadius
         buttonView.layer.cornerRadius = 10
     }
-
-
+    
+    @IBAction func buttonViewTapped(_ sender: UIButton) {
+        sender.setTitle("Next", for: .normal)
+        switchLight()
+    }
+    
+    private func switchLight() {
+        if redLightView.alpha == 1 {
+            updateLight(
+                redLightTransparency: 0.3,
+                yellowLightTransparency: 1,
+                greenLightTransparency: 0.3
+            )
+        } else if yellowLightView.alpha == 1 {
+            updateLight(
+                redLightTransparency: 0.3,
+                yellowLightTransparency: 0.3,
+                greenLightTransparency: 1
+            )
+        } else {
+            updateLight(
+                redLightTransparency: 1,
+                yellowLightTransparency: 0.3,
+                greenLightTransparency: 0.3
+            )
+        }
+    }
+    
+    private func updateLight(
+        redLightTransparency: CGFloat,
+        yellowLightTransparency: CGFloat,
+        greenLightTransparency: CGFloat
+    ) {
+        self.redLightView.alpha = redLightTransparency
+        self.yellowLightView.alpha = yellowLightTransparency
+        self.greenLightView.alpha = greenLightTransparency
+    }
 }
 
