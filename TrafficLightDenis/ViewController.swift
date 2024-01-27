@@ -9,7 +9,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
     @IBOutlet var redLightView: UIView!
     @IBOutlet var yellowLightView: UIView!
     @IBOutlet var greenLightView: UIView!
@@ -20,36 +19,28 @@ class ViewController: UIViewController {
         [redLightView, yellowLightView, greenLightView].forEach {
             $0.layer.cornerRadius = $0.frame.size.width / 2
         }
-        
         buttonView.layer.cornerRadius = 10
     }
     
-    @IBAction func buttonViewTapped() {
+    @IBAction func buttonViewDidTapped() {
         buttonView.setTitle("Next", for: .normal)
-        switchLight()
+        switchTrafficLight()
     }
     
-    private func switchLight() {
+    private func switchTrafficLight() {
         if redLightView.alpha == 1 {
-            updateLightState(
-                yellowLightTransparency: 1
-            )
+            updateTrafficLightState(yellowLightTransparency: 1)
         } else if yellowLightView.alpha == 1 {
-            updateLightState(
-                greenLightTransparency: 1
-            )
+            updateTrafficLightState(greenLightTransparency: 1)
         } else {
-            updateLightState(
-                redLightTransparency: 1
-            )
+            updateTrafficLightState(redLightTransparency: 1)
         }
     }
 
-    private func updateLightState(
+    private func updateTrafficLightState(
         redLightTransparency: CGFloat = 0.3,
         yellowLightTransparency: CGFloat = 0.3,
         greenLightTransparency: CGFloat = 0.3
-        
     ) {
         self.redLightView.alpha = redLightTransparency
         self.yellowLightView.alpha = yellowLightTransparency
