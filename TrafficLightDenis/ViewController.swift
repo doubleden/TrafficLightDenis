@@ -15,16 +15,13 @@ class ViewController: UIViewController {
     @IBOutlet var greenLightView: UIView!
     @IBOutlet var buttonView: UIButton!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        buttonView.layer.cornerRadius = 10
-    }
-    
-// Корректировка радиуса светофора под разные устройства после загрузки View
+// Настройка элементов интерфейса после загрузки View
     override func viewDidLayoutSubviews() {
         [redLightView, yellowLightView, greenLightView].forEach {
             $0.layer.cornerRadius = $0.frame.size.width / 2
         }
+        
+        buttonView.layer.cornerRadius = 10
     }
     
     @IBAction func buttonViewTapped() {
