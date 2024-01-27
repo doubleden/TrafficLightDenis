@@ -9,58 +9,50 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    
     @IBOutlet var redLightView: UIView!
     @IBOutlet var yellowLightView: UIView!
     @IBOutlet var greenLightView: UIView!
     @IBOutlet var buttonView: UIButton!
-    
-    private var lightCornerRadius: CGFloat {
-        redLightView.frame.size.width / 2
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         buttonView.layer.cornerRadius = 10
     }
     
-//    Корректировка радиуса светофора под разные устройства после загрузки View
+// Корректировка радиуса светофора под разные устройства после загрузки View
     override func viewDidLayoutSubviews() {
-        redLightView.layer.cornerRadius = lightCornerRadius
-        yellowLightView.layer.cornerRadius = lightCornerRadius
-        greenLightView.layer.cornerRadius = lightCornerRadius
+        [redLightView, yellowLightView, greenLightView].forEach {
+            $0.layer.cornerRadius = $0.frame.size.width / 2
+        }
     }
     
-    @IBAction func buttonViewTapped(_ sender: UIButton) {
-        sender.setTitle("Next", for: .normal)
+    @IBAction func buttonViewTapped() {
+        buttonView.setTitle("Next", for: .normal)
         switchLight()
     }
     
     private func switchLight() {
         if redLightView.alpha == 1 {
-            updateLight(
-                redLightTransparency: 0.3,
-                yellowLightTransparency: 1,
-                greenLightTransparency: 0.3
+            updateLightState(
+                yellowLightTransparency: 1
             )
         } else if yellowLightView.alpha == 1 {
-            updateLight(
-                redLightTransparency: 0.3,
-                yellowLightTransparency: 0.3,
+            updateLightState(
                 greenLightTransparency: 1
             )
         } else {
-            updateLight(
-                redLightTransparency: 1,
-                yellowLightTransparency: 0.3,
-                greenLightTransparency: 0.3
+            updateLightState(
+                redLightTransparency: 1
             )
         }
     }
 
-    private func updateLight(
-        redLightTransparency: CGFloat,
-        yellowLightTransparency: CGFloat,
-        greenLightTransparency: CGFloat
+    private func updateLightState(
+        redLightTransparency: CGFloat = 0.3,
+        yellowLightTransparency: CGFloat = 0.3,
+        greenLightTransparency: CGFloat = 0.3
+        
     ) {
         self.redLightView.alpha = redLightTransparency
         self.yellowLightView.alpha = yellowLightTransparency

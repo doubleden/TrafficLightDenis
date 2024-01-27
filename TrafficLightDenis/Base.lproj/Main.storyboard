@@ -56,7 +56,7 @@
                                             <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonViewTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q1w-yZ-5z5"/>
+                                            <action selector="buttonViewTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="JBh-L3-Fhu"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -75,10 +75,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="buttonView" destination="GRH-w7-Y3k" id="YE2-dR-bd5"/>
-                        <outlet property="greenLightView" destination="heG-rC-Yzd" id="0cO-pe-LZq"/>
-                        <outlet property="redLightView" destination="ZEs-zN-UwK" id="yvr-dF-Clm"/>
-                        <outlet property="yellowLightView" destination="NSc-Nw-fxS" id="fVy-g4-FyA"/>
+                        <outlet property="buttonView" destination="GRH-w7-Y3k" id="zTz-bg-Rau"/>
+                        <outlet property="greenLightView" destination="heG-rC-Yzd" id="VjT-QI-GWJ"/>
+                        <outlet property="redLightView" destination="ZEs-zN-UwK" id="gRM-2g-8vd"/>
+                        <outlet property="yellowLightView" destination="NSc-Nw-fxS" id="rS5-nQ-O1b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -91,16 +91,16 @@
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
