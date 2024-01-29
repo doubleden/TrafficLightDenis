@@ -7,14 +7,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
+    
+    enum TrafficLightState {
+        case off, red, yellow, green
+    }
     
     @IBOutlet var redLightView: UIView!
     @IBOutlet var yellowLightView: UIView!
     @IBOutlet var greenLightView: UIView!
     @IBOutlet var buttonView: UIButton!
     
-// Настройка элементов интерфейса после загрузки View
+    private var currentTrafficLightState: TrafficLightState = .off
+    
     override func viewDidLayoutSubviews() {
         [redLightView, yellowLightView, greenLightView].forEach {
             $0.layer.cornerRadius = $0.frame.size.width / 2
@@ -23,17 +28,20 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttonViewDidTapped() {
-        buttonView.setTitle("Next", for: .normal)
-        switchTrafficLight()
-    }
-    
-    private func switchTrafficLight() {
-        if redLightView.alpha == 1 {
-            updateTrafficLightState(yellowLightTransparency: 1)
-        } else if yellowLightView.alpha == 1 {
-            updateTrafficLightState(greenLightTransparency: 1)
-        } else {
-            updateTrafficLightState(redLightTransparency: 1)
+        switch currentTrafficLightState {
+        case .off:
+            buttonView.setTitle("Next", for: .normal)
+            updateTrafficLightState(redLightTransparency: 1.0)
+            currentTrafficLightState = .red
+        case .red:
+            updateTrafficLightState(yellowLightTransparency: 1.0)
+            currentTrafficLightState = .yellow
+        case .yellow:
+            updateTrafficLightState(greenLightTransparency: 1.0)
+            currentTrafficLightState = .green
+        case .green:
+            updateTrafficLightState(redLightTransparency: 1.0)
+            currentTrafficLightState = .red
         }
     }
 
