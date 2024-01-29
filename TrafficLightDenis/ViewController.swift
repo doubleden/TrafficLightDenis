@@ -9,16 +9,15 @@ import UIKit
 
 final class ViewController: UIViewController {
     
-    enum TrafficLightState {
-        case off, red, yellow, green
-    }
-    
     @IBOutlet var redLightView: UIView!
     @IBOutlet var yellowLightView: UIView!
     @IBOutlet var greenLightView: UIView!
+    
     @IBOutlet var buttonView: UIButton!
     
-    private var currentTrafficLightState: TrafficLightState = .off
+    private var currentTrafficLightState: TrafficLightState = .red
+    private let lightIsOn = 1.0
+    private let lightIsOff = 0.3
     
     override func viewDidLayoutSubviews() {
         [redLightView, yellowLightView, greenLightView].forEach {
@@ -28,31 +27,49 @@ final class ViewController: UIViewController {
     }
     
     @IBAction func buttonViewDidTapped() {
-        switch currentTrafficLightState {
-        case .off:
+        if buttonView.currentTitle == "Start" {
             buttonView.setTitle("Next", for: .normal)
-            updateTrafficLightState(redLightTransparency: 1.0)
-            currentTrafficLightState = .red
+        }
+        
+        switch currentTrafficLightState {
         case .red:
-            updateTrafficLightState(yellowLightTransparency: 1.0)
+            updateTrafficLightState(
+                red: lightIsOn,
+                yellow: lightIsOff,
+                green: lightIsOff
+            )
             currentTrafficLightState = .yellow
         case .yellow:
-            updateTrafficLightState(greenLightTransparency: 1.0)
+            updateTrafficLightState(
+                red: lightIsOff,
+                yellow: lightIsOn,
+                green: lightIsOff
+            )
             currentTrafficLightState = .green
         case .green:
-            updateTrafficLightState(redLightTransparency: 1.0)
+            updateTrafficLightState(
+                red: lightIsOff,
+                yellow: lightIsOff,
+                green: lightIsOn
+            )
             currentTrafficLightState = .red
         }
     }
 
     private func updateTrafficLightState(
-        redLightTransparency: CGFloat = 0.3,
-        yellowLightTransparency: CGFloat = 0.3,
-        greenLightTransparency: CGFloat = 0.3
+        red: CGFloat,
+        yellow: CGFloat,
+        green: CGFloat
     ) {
-        self.redLightView.alpha = redLightTransparency
-        self.yellowLightView.alpha = yellowLightTransparency
-        self.greenLightView.alpha = greenLightTransparency
+        self.redLightView.alpha = red
+        self.yellowLightView.alpha = yellow
+        self.greenLightView.alpha = green
     }
 }
 
+// MARK: - CurrentLightState
+extension ViewController {
+    private enum TrafficLightState {
+        case red, yellow, green
+    }
+}
