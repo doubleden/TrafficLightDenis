@@ -38,10 +38,10 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRH-w7-Y3k">
-                                <rect key="frame" x="128" y="728" width="137" height="50"/>
+                                <rect key="frame" x="88" y="715" width="217" height="57"/>
                                 <color key="backgroundColor" name="AccentColor"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <inset key="contentEdgeInsets" minX="38" minY="8" maxX="40" maxY="8"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Start">
                                     <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
@@ -54,12 +54,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="GRH-w7-Y3k" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="217:852" id="0j0-K2-XUU"/>
                             <constraint firstItem="GRH-w7-Y3k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4rB-jI-Hj9"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GRH-w7-Y3k" secondAttribute="bottom" constant="40" id="CxA-bX-gom"/>
                             <constraint firstItem="rnV-Du-m0t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IzB-by-SoF"/>
                             <constraint firstItem="rnV-Du-m0t" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.501174" id="SXr-ZK-0jb"/>
                             <constraint firstItem="rnV-Du-m0t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="UVM-ql-2vG"/>
-                            <constraint firstItem="GRH-w7-Y3k" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="137:852" id="wh6-iA-q1g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GRH-w7-Y3k" secondAttribute="bottom" constant="46" id="mSr-Kg-ENF"/>
                         </constraints>
                     </view>
                     <connections>
